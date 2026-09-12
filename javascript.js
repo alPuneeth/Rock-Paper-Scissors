@@ -18,42 +18,40 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    const choice = prompt("Enter your choice among - rock, paper or scissors", "rock");
-    const res = choice.toLowerCase();
-    console.log(`You: ${res}`);
-    return res
+    const choice = prompt("Enter your choice - rock/ paper /scissors", "rock");
+    const result = choice.toLowerCase();
+    console.log(`You: ${result}`);
+    return result
 }
 
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
-        computerScore += 0
-        humanScore += 0
+    if (humanChoice == computerChoice) {
         return "DRAW!"
 
     } else if (humanChoice == "rock" && computerChoice == "scissors") {
         humanScore += 1
-        return "You win!"
+        return "You win! rock beats scissors."
 
     } else if (humanChoice == "rock" && computerChoice == "paper") {
         computerScore += 1
-        return "Computer wins!"
+        return "Computer wins! rock beats paper."
 
     } else if (humanChoice == "paper" && computerChoice == "scissors") {
         computerScore += 1
-        return "Computer wins!"
+        return "Computer wins! scissors beat paper."
 
     } else if (humanChoice == "paper" && computerChoice == "rock") {
         humanScore += 1
-        return "You win!"
+        return "You win! paper beats rock."
 
     } else if (humanChoice == "scissors" && computerChoice == "rock") {
         computerScore += 1
-        return "Computer wins!"
+        return "Computer wins! rock beats scissors."
 
     } else if (humanChoice == "scissors" && computerChoice == "paper") {
         humanScore += 1
-        return "You win!"
+        return "You win! scissors beat paper."
 
     } else {
         return "Enter a valid choice!"
@@ -66,19 +64,21 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
-        const res = playRound(humanSelection, computerSelection);
-        alert(res)
+        const result = playRound(humanSelection, computerSelection);
+        alert(result)
 
         console.log(`Your score: ${humanScore}`)
         console.log(`Computer's score: ${computerScore}`)
     }
      
     if (humanScore > computerScore) {
-        return alert("You won the game! Congrats.")
+        alert("You win the game! Congrats.")
+        return
     } else if (humanScore < computerScore) {
-        return alert("You lose! Better luck next time.")
+        alert("You lose! Better luck next time.")
+        return
     }
-    return alert("It's a Draw! Play again.")
+    alert("It's a Draw! Play again.")
 }
 
 playGame();
