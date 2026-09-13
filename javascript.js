@@ -19,6 +19,9 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     const choice = prompt("Enter your choice - rock/ paper /scissors", "rock");
+    if (!choice) {
+        return "It"
+    }
     const result = choice.toLowerCase();
     console.log(`You: ${result}`);
     return result
@@ -66,7 +69,7 @@ function playGame() {
         const humanSelection = getHumanChoice();
         const result = playRound(humanSelection, computerSelection);
         alert(result)
-
+        
         console.log(`Your score: ${humanScore}`)
         console.log(`Computer's score: ${computerScore}`)
     }
@@ -81,4 +84,6 @@ function playGame() {
     alert("It's a Draw! Play again.")
 }
 
-playGame();
+const playButton = document.querySelector("#play");
+playButton.addEventListener("click", playGame);
+// console.log(playButton);
