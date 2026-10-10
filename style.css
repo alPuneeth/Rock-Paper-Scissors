@@ -240,11 +240,28 @@ body::after {
     .score-display {
         width: 100%;
         padding: 0 12px;
-        flex-wrap: wrap;
+        transform: scale(0.8);
     }
 
     body::before,
     body::after {
         display: none;
+    }
+
+    .player-score {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+}
+
+    .computer-score {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .circles {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
 }
