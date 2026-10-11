@@ -252,6 +252,10 @@ body::after {
         gap: 8px;
     }
 
+    .game-result {
+    text-align: center;
+    }
+
 
     body::before,
     body::after {
