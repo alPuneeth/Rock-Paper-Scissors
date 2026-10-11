@@ -237,7 +237,7 @@ body::after {
         width: 100%;
     }
 
-    
+
     .score-display {
         width: 100%;
         padding: 0 12px;
@@ -255,17 +255,12 @@ body::after {
     }
 
 
-    .player-score {
+    .player-score,
+    .computer-score {
     width: auto;
     flex: 1;
     min-width: 0;
 }
-
-
-    .computer-score {
-        flex: 1;
-        min-width: 0;
-    }
 
 
     .circles {
@@ -281,12 +276,19 @@ body::after {
     }
 
 
+    h1 {
+    font-size: clamp(32px, 8vw, 42px);
+    padding-top: 40px;
+    padding-bottom: 10px;
+    }
+
+
     .rps-buttons {
     min-width: 0;
     width: 100%;
     margin: 10px 0;
     padding: 10px 4px;
-    gap: 4px;
+    gap: 6px;
     }
 
 
