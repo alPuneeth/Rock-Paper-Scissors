@@ -272,6 +272,6 @@ body::after {
 
     .player,
     .computer {
-    font-size: clamp(16px, 4vw, 24px);
+    font-size: clamp(14px, 3.5vw, 20px);
     }
 }
