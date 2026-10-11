@@ -237,21 +237,23 @@ body::after {
         width: 100%;
     }
 
+    
     .score-display {
         width: 100%;
         padding: 0 12px;
-        /* transform: scale(0.8); */
-
     }
+
 
     body::before,
     body::after {
         display: none;
     }
 
+
     .score-circle {
         min-width: 0;
     }
+
 
     .player-score {
     width: auto;
@@ -259,10 +261,12 @@ body::after {
     min-width: 0;
 }
 
+
     .computer-score {
         flex: 1;
         min-width: 0;
     }
+
 
     .circles {
         width: 200px;
@@ -270,8 +274,27 @@ body::after {
         border-radius: 50%;
     }
 
+
     .player,
     .computer {
     font-size: clamp(14px, 3.5vw, 20px);
+    }
+
+
+    .rps-buttons {
+    min-width: 0;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 4px;
+    gap: 4px;
+    }
+
+
+    .rps-buttons button {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        padding: 10px 4px;
+        font-size: 16px;
     }
 }
